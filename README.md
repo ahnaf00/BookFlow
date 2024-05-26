@@ -51,7 +51,17 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+git clone https://github.com/ahnaf00/BookFlow
+cd BookFlow
+
+Install the dependencies
+composer install
+
+Copy .env copy to .env
+cp .env copy  .env
+
+Start the webserver
+php artisan serve
 
 ## Code of Conduct
 
