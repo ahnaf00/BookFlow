@@ -10,18 +10,18 @@
 # How to use
 generate readme file for laravel which will be in github where there will be given instructions
 
-git clone https://github.com/ahnaf00/BookFlow
+1.git clone https://github.com/ahnaf00/BookFlow
 
-cd BookFlow
+2.cd BookFlow
 
-Install the dependencies
+3.Install the dependencies
 
 composer install
 
-Copy .env copy to .env
+4.Copy .env copy to .env
 
 cp .env copy  .env
 
-Start the webserver
+5.Start the webserver
 
 php artisan serve
