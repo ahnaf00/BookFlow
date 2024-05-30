@@ -92,7 +92,7 @@ class SubCategoryController extends Controller
      */
     public function destroy(string $id)
     {
-   
+       // delete sub categories
         SubCategory::destroy($id);
 
         return response()->back()->with('success', 'Category deleted successfully');
