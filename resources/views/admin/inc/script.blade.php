@@ -7,6 +7,8 @@
 <script src="{{ asset('backend/assets') }}/js/plugins/jkanban/jkanban.js"></script>
 <script src="{{ asset('backend/assets') }}/js/plugins/chartjs.min.js"></script>
 <script src="{{ asset('backend/assets') }}/js/plugins/swiper-bundle.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{ asset('backend/assets') }}/js/custom.js"></script>
 <script>
     if (document.getElementsByClassName('mySwiper')) {
         var swiper = new Swiper(".mySwiper", {

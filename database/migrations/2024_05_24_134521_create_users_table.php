@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Role;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,8 +18,9 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('phone', 15)->nullable();
-            $table->enum('role', ['user', 'admin'])->default('user');
+            $table->string('phone', 15)->nullable()->unique();
+            $table->enum('role', Role::collection()->toArray())->default(Role::User->toString());
+            $table->boolean('is_deletable')->default(true);
             $table->timestamps();
         });
     }

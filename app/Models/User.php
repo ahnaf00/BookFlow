@@ -3,6 +3,9 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Enums\Role;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -17,9 +20,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
+        'phone',
         'password',
+        'role'
     ];
 
     /**
@@ -43,5 +49,37 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Get the full name of the users
+     *
+     * @return Attribute
+     */
+    public function fullName(): Attribute
+    {
+        return Attribute::get(
+            fn (): string => $this->first_name . " " . $this->last_name
+        );
+    }
+
+    /**
+     * Check if the users is an admin
+     *
+     * @return bool
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === Role::ADMIN->toString();
+    }
+
+    /**
+     * Check if the users is a general users
+     *
+     * @return bool
+     */
+    public function isUser(): bool
+    {
+        return $this->role === Role::USER->toString();
     }
 }
