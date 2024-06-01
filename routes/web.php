@@ -11,6 +11,3 @@ Route::get('/', function () {
 
 Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
 
-Route::resource('category', CategoryController::class);
-
-Route::resource('sub-category', SubCategoryController::class);
