@@ -44,19 +44,22 @@
 
 <link id="pagestyle" href="{{ asset('backend/assets') }}/css/corporate-ui-dashboard.min.css?v=1.0.0" rel="stylesheet" />
 
-{{-- JQuery --}}
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> --}}
 
-{{-- Toast message css --}}
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+
+<link href="{{asset('css/toastify.min.css')}}" rel="stylesheet" />
+<script src="{{asset('js/toastify-js.js')}}"></script>
+<script src="{{asset('js/config.js')}}"></script>
+
 
 <link href="{{asset('css/jquery.dataTables.min.css')}}" rel="stylesheet" />
 <script src="{{asset('js/jquery-3.7.0.min.js')}}"></script>
 <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
 
+<script src="{{asset('js/axios.min.js')}}"></script>
 
 
-<style>
+
+{{-- <style>
     .async-hide {
         opacity: 0 !important
     }
@@ -117,4 +120,4 @@
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
-</script>
+</script> --}}

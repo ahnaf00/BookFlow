@@ -1,6 +1,6 @@
 @extends('admin.admin-dashboard')
 
-@section('content')
+{{-- @section('content')
 
 <div class="row">
     <div class="col-md-12">
@@ -12,4 +12,7 @@
     </div>
 </div>
 
-@endsection
+@endsection --}}
+
+
+@yield('content')

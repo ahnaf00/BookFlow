@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" class="dropdown-item border-radius-md">
+                    <a href="{{route('AdminLogOut')}}" class="dropdown-item border-radius-md">
                         Logout
                     </a>
                 </li>

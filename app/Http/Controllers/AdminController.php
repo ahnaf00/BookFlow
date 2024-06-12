@@ -16,4 +16,9 @@ class AdminController extends Controller
     {
         return view('admin.admin-login-view');
     }
+
+    public function AdminLogOut()
+    {
+        return redirect('/')->cookie('token', '', -1);
+    }
 }
