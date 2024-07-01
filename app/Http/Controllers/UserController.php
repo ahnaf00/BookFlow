@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
+    // Admin Dasboard
+    public function UsersPage()
+    {
+        return view('pages.users-page');
+    }
+
     public function RegisterPage()
     {
         return view('pages.register-page');
@@ -65,7 +71,7 @@ class UserController extends Controller
         if($user && $user->role === 'user')
         {
             $token = JWTToken::CreateToken($UserEmail, $user->id, $user->role);
-            return response()->json(['status' => 'success', 'role'=>'user'])->cookie('token', $token, 60*24*24);
+            return response()->json(['status' =>'success', 'role'=>'user'])->cookie('token', $token, 60*24*24);
         }
         else if($user && $user->role == 'admin')
         {
@@ -101,5 +107,18 @@ class UserController extends Controller
     function UserLogout()
     {
         return redirect('/')->cookie('token', '', -1);
+    }
+
+    public function UsersList()
+    {
+        try
+        {
+            $users = User::where('role', 'user')->with('userProfile')->get();
+            return ResponseHelper::Out('sucess', $users, 200);
+        }
+        catch(Exception $exception)
+        {
+            return ResponseHelper::Out('failed', $exception->getMessage(), 401);
+        }
     }
 }

@@ -59,3 +59,44 @@ a:hover {
   box-shadow: none !important;
 }
 
+/* increment decrecment */
+.quantity {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.quantity .minus,
+.quantity .plus {
+    background-color:rgb(32 41 64); /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity .qty {
+    /* text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    width: 60px;
+    border: 1px solid #ccc;
+    border-radius: 4px; */
+
+    float: left;
+	width: 55px;
+	height: 36px;
+	border: 1px solid #ddd;
+	background-color: transparent;
+	text-align: center;
+	padding: 0;
+	margin: 3px;
+}
+

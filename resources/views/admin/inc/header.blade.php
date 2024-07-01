@@ -1,7 +1,7 @@
 <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('backend/assets') }}/img/apple-icon.png">
 <link rel="icon" type="image/png" href="{{ asset('backend/assets') }}/img/favicon.png">
 <title>
-    Corporate UI Dashboard PRO by Creative Tim
+    BookFlow
 </title>
 
 
@@ -44,7 +44,7 @@
 
 <link id="pagestyle" href="{{ asset('backend/assets') }}/css/corporate-ui-dashboard.min.css?v=1.0.0" rel="stylesheet" />
 
-
+<link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 <link href="{{asset('css/toastify.min.css')}}" rel="stylesheet" />
 <script src="{{asset('js/toastify-js.js')}}"></script>
@@ -52,8 +52,10 @@
 
 
 <link href="{{asset('css/jquery.dataTables.min.css')}}" rel="stylesheet" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 <script src="{{asset('js/jquery-3.7.0.min.js')}}"></script>
 <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 
 <script src="{{asset('js/axios.min.js')}}"></script>
 

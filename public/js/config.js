@@ -20,7 +20,7 @@ function successToast(msg) {
 function errorToast(msg) {
     Toastify({
         gravity: "bottom", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
+        position: "right", // `left`, `center` or `right`
         text: msg,
         className: "mb-5",
         style: {

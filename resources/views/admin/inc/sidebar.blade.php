@@ -5,14 +5,14 @@
         <a class="navbar-brand d-flex align-items-center m-0"
             href="{{ route('admin.dashboard') }}"
             target="_blank">
-            <img class="navbar-brand-img" src="{{ asset('backend/assets') }}/img/logo-ct.png" alt>
-            <span class="font-weight-bold ms-2">Admin Dashboard</span>
+            {{-- <img class="navbar-brand-img" src="{{ asset('backend/assets') }}/img/logo-ct.png" alt> --}}
+            <span class="font-weight-bold ms-2"><h4 class="text-white">BookFlow</h4></span>
         </a>
     </div>
     <div class="collapse navbar-collapse px-3  w-auto h-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#pagesExamples" class="nav-link text-white opacity-9"
+                {{-- <a data-bs-toggle="collapse" href="#pagesExamples" class="nav-link text-white opacity-9"
                     aria-controls="pagesExamples" role="button" aria-expanded="false">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center d-flex align-items-center justify-content-center">
@@ -37,10 +37,65 @@
                         </svg>
                     </div>
                     <span class="nav-link-text ms-2">Pages</span>
-                </a>
+                </a> --}}
                 <div class="collapse show" id="pagesExamples">
                     <ul class="nav border-start ms-4">
+                        
+                        {{-- Admin Dashboard --}}
                         <li class="nav-item ">
+                            <a class="nav-link text-white opacity-9"
+                                href="{{ route('admin.dashboard') }}">
+                                <span class="text-xs sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal">Admin Dashboard</span>
+                            </a>
+                        </li>
+
+                        {{-- Categories --}}
+                        <li class="nav-item ">
+                            <a class="nav-link text-white opacity-9"
+                                href="{{ route('CategoryPage') }}">
+                                <span class="text-xs sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal">All Categories </span>
+                            </a>
+                        </li>
+
+                        {{-- Subcategories --}}
+                        <li class="nav-item ">
+                            <a class="nav-link text-white opacity-9"
+                                href="{{ route('SubCategoryPage') }}">
+                                <span class="text-xs sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal">All SubCategories </span>
+                            </a>
+                        </li>
+
+                        {{-- All Books --}}
+                        <li class="nav-item ">
+                            <a class="nav-link text-white opacity-9"
+                                href="{{ route('BooksPage') }}">
+                                <span class="text-xs sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal">All Books </span>
+                            </a>
+                        </li>
+
+                        {{-- Lendings --}}
+                        <li class="nav-item ">
+                            <a class="nav-link text-white opacity-9"
+                            href="{{route('LendingPage')}}">
+                                <span class="text-xs sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal">Lendings</span>
+                            </a>
+                        </li>
+
+                        {{-- Users --}}
+                        <li class="nav-item ">
+                            <a class="nav-link text-white opacity-9"
+                            href="{{route('UsersPage')}}">
+                                <span class="text-xs sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal">Users</span>
+                            </a>
+                        </li>
+
+                        {{-- <li class="nav-item ">
                             <a class="nav-link text-white opacity-9 " data-bs-toggle="collapse" aria-expanded
                                 href="#profileExample">
                                 <span class="sidenav-mini-icon"> P </span>
@@ -57,11 +112,10 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </li>
-
         </ul>
     </div>
 
