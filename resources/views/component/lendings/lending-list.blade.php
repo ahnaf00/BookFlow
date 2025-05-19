@@ -41,7 +41,6 @@
 
         let response = await axios.get('/lending-list')
 
-        console.log(response.data.data);
         let tableData = $('#tableData')
         let tableList = $('#tableList')
 
@@ -65,22 +64,22 @@
                     <td>${bookTitle}</td>
                     <td>${bookAuthor}</td>
                     <td>
-                        <button data-id="${item['id']}" class="btn btn-outline-success editBtn">Edit</button>
-                        <button data-id="${item['id']}" class="btn btn-outline-danger deleteBtn">Delete</button>
+                        <button data-id="${item['id']}" class="btn btn-outline-success lendingEditBtn">Edit</button>
+                        <button data-id="${item['id']}" class="btn btn-outline-danger lendingDeleteBtn">Delete</button>
                     </td>
                 </tr>`;
             tableList.append(row);
         });
 
-        $('.editBtn').on('click', async function () {
+        $('.lendingEditBtn').on('click', async function () {
             let id = $(this).data('id');
-            await FillUpdatedForm(id)
-            $("#update-modal").modal("show")
+            await FillUpdatedLendingForm(id)
+            $("#lending-update-modal").modal("show")
         })
 
-        $('.deleteBtn').on('click', function () {
+        $('.lendingDeleteBtn').on('click', function () {
             let id = $(this).data('id');
-            $("#delete-modal").modal("show")
+            $("#lending-delete-modal").modal("show")
             $("#deleteID").val(id)
         })
 

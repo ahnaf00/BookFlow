@@ -17,7 +17,6 @@
             id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="true" data-bs-auto-close="outside">
                 <div class="avatar avatar-sm position-relative">
                     <img src="{{ asset('backend/assets') }}/img/team-1.jpg" alt="profile_image" class="w-100 border-radius-lg">
-                    {{-- <img src="{{ $data['photo'] ? url($data['photo']) : asset('backend/assets/img/team-1.jpg') }}" alt="image" class="w-100 border-radius-lg shadow-sm"> --}}
                 </div>
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownProfile" data-bs-popper="static">

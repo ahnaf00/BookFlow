@@ -1,0 +1,17 @@
+@import './bootstrap.css';
+@import './animate.min.css';
+@import './fontawesome.css';
+@import './style.css';
+@import './toastify.min.css';
+/* @import './jquery.dataTables.min.css'; */
+@import './jquery-ui.css';
+@import './corporate-ui-dashboard.css';
+/* @import './corporate-ui-dashboard.css.map'; */
+@import './corporate-ui-dashboard.min.css';
+
+
+@import 'datatables.net-dt/css/jquery.dataTables.css';
+
+/* Optional: if using jQuery UI */
+@import 'jquery-ui/themes/base/all.css';
+

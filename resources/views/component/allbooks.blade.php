@@ -19,7 +19,7 @@
 
         response.data.data.forEach((item) => {
             let row = `
-                <div class="col-lg-3 col-6 mb-lg-0 mb-1">
+                <div class="col-lg-3 col-6 mb-lg-0 mb-1 my-2">
                     <div class="card shadow-lg">
                         <div class="card-body px-0 pt-0 text-center border-radius-lg bg-white">
                             <a href="javascript:;">

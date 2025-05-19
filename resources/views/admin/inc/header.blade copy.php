@@ -1,13 +1,3 @@
-{{-- <title>BookFlow</title>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto+Sans:300,400,500,600,700,800|PT+Mono:300,400,500,600,700" rel="stylesheet" />
-<script src="https://kit.fontawesome.com/349ee9c857.js" crossorigin="anonymous"></script>
-@vite([
-    '/resources/css/app.css',
-    '/resources/js/app.js'
-])
- --}}
-
-
 {{-- <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('backend/assets') }}/img/apple-icon.png">
 <link rel="icon" type="image/png" href="{{ asset('backend/assets') }}/img/favicon.png"> --}}
 <title>

@@ -56,7 +56,7 @@
                 if (error.response && error.response.status == 401) {
                     window.location.href="/register";
                 } else {
-                    errorToast("An error occurred. Please try again.");
+                    errorToast(error);
                 }
             }
         }

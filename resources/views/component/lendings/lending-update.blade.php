@@ -1,4 +1,4 @@
-<div class="modal animated zoomIn" id="update-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal animated zoomIn" id="lending-update-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -52,7 +52,7 @@
     $( function() {
         $( "#lendingDueDateUpdate" ).datepicker();
     } );
-    async function FillUpdatedForm(id)
+    async function FillUpdatedLendingForm(id)
     {
         document.getElementById('updateID').value   = id
 
@@ -61,8 +61,8 @@
         })
 
 
-        document.getElementById('lendingUserNameUpdate').value          = response.data.data['user']['first_name']
-        // document.getElementById('lendingStatusUpdate').value            = response.data.data['status']
+        // document.getElementById('lendingUserNameUpdate').value          = response.data.data['user']['first_name']
+        document.getElementById('lendingStatusUpdate').value            = response.data.data['status']
         document.getElementById('lendingDueDateUpdate').value           = response.data.data['due_date']
 
         await fetchBooks(response.data.data['book']['id']);

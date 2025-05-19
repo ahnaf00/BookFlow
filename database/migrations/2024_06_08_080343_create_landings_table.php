@@ -17,8 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('book_id');
             $table->integer('quantity');
             $table->enum('status', ['pending','lent', 'returned', 'overdue'])->default('pending');
-            $table->timestamp('loaned_on');
-            $table->timestamp('due_date');
+            $table->timestamp('loaned_on')->nullable();
+            $table->timestamp('due_date')->nullable();
 
             // Add foreign key constraints if users and books tables exist
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
